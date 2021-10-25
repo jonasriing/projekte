@@ -1,0 +1,74 @@
+.body {
+    margin: 15px;
+}
+
+input {
+    margin: 15px;
+}
+
+#navigation {
+    padding: 15px;
+}
+
+.user-profile {
+  padding: 1%;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.margin-t-b {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.post {
+    margin-bottom: 0.25%;
+    padding: 1%;
+    background-color: rgba(240, 240, 240, 1.0);
+    border-radius: 5px;
+}
+
+.a-no-styling, .a-no-styling:hover {
+    text-decoration: solid;
+    color: black;
+}
+
+.timestamp {
+    color: grey;
+    font-size: smaller;
+}
+
+.like:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.likes {
+    font-size: smaller;
+    color: grey;
+}
+
+.liked {
+    color: red;
+}
+
+.liked:hover {
+    
+    color: grey;
+    cursor: pointer;
+}
+
+.page-item {
+    cursor: pointer;
+}
+
+.disabled {
+    cursor: default;
+}
+
+.id {
+    margin: 0;
+    font-size: xx-small;
+    color: grey;
+}

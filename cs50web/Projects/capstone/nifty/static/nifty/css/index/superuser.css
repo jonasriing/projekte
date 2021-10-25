@@ -1,0 +1,23 @@
+.admin-course-wrapper, .admin-edit-select-wrapper {
+    background-color: rgb(250, 250, 250);
+    padding: 1rem;
+    margin-top: 5vh;
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+.admin-course-wrapper:hover, .admin-edit-select-wrapper:hover {
+    background-color: rgb(240, 240, 240);
+}
+.admin-course-wrapper .admin-course-description {
+    color: rgb(26, 26, 26);
+}
+
+.admin-course-wrapper .admin-course-information {
+    color: rgb(75, 75, 75);
+}
+
+
+.admin-edit-select-wrapper a, .admin-edit-select-wrapper a:visited {
+    text-decoration: none;
+    color: black;
+}

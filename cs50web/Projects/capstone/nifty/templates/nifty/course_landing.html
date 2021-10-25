@@ -1,0 +1,25 @@
+{% extends 'nifty/layout.html' %}
+
+{% block body %}
+<p id="course_id" style="display: None;">{{ course.id }}</p>
+<div class="course-contents">
+    <h1>{{ course.name }}</h1>
+    <p class="subtitle">{{ course.description|safe }}</p>
+    <div class="navigation"></div>
+    {% if user in course.participants.all %}
+    <a type="button" href="{% url 'progress' course.id %}" class="btn btn-outline-primary m-b-2vh">View your progress</a>
+    {% endif %}
+    {% if user.is_superuser %}
+        <a type="button" href="{% url 'edit' course.id %}" class="btn btn-outline-secondary m-b-2vh">Edit this course</a>
+        <button id="admin-view-participants" type="button" class="btn btn-outline-secondary m-b-2vh">View all participants</button>
+        <button id="admin-import-scores" type="button" class="btn btn-outline-secondary m-b-2vh">Import scores</button>
+        {% if not user in course.participants.all %}
+        <a href="{% url 'enroll' course.id %}" class="btn btn-outline-primary m-b-2vh">Enroll now</a>
+        {% endif %}
+    {% endif %}
+    <hr>
+    <div id="display"></div>
+    
+    
+   
+{% endblock body %}

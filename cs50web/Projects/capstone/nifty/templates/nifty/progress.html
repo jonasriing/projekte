@@ -1,0 +1,14 @@
+{% extends 'nifty/layout.html' %}
+
+{% block body %}
+    <p id="course_id" style="display: None;">{{ course.id }}</p>
+    <p class="fs-1 fw-light" style="margin-bottom: 0;">{{ course.name }}</p>
+    <p class="fw-light fs-3" style="margin-bottom: 0;">This is your Progress.</p>
+    <hr>
+    <div class="progress">
+        <div id="progress-bar" class="progress-bar bg-success" role="progressbar"></div>
+    </div>
+    <div style="margin-top: 2vh; margin-bottom: 2vh;"class="fs-5 fw-lighter status"></div>
+    <ul class="fs-5 fw-light" id="topics"></ul>
+
+{% endblock body %}

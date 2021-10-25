@@ -1,0 +1,12 @@
+{% extends 'nifty/layout.html' %}
+
+{% block body %}
+
+    
+    <p class="fs-3 fw-light"><i class="fas fa-exclamation-triangle"></i> <span>{{ message }}</span></p>
+    <hr>
+    <p class="fs-5 fw-light">This certificate was not found. Please check whether you used the correct certificate-id.</p>
+    <p class="fs-5 fw-light">If your certificate should be displayed here (and it is not), try to re-claim your certificate.</p>
+    <p class="fs-5 fw-light">If you're unable to re-claim your certificate, please contact the staff.</p>
+
+{% endblock body%}

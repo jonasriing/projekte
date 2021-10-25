@@ -1,0 +1,45 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block scripts %}
+<script src="{% static 'network/profile.js' %}"></script>
+{% endblock scripts %}
+{% block body %}
+    {% if error %}
+    <div style="text-align: center;">
+        <img src="https://cdn.pixabay.com/photo/2020/07/21/08/28/pug-5425568_960_720.png" style="height: 200px; text-align: center;" alt="Sad">
+    </div>
+    <div style="text-align: center; width: 25%;  margin: 0 auto;" class="alert alert-danger">
+        
+        <strong>Error:</strong> {{ error | safe }}
+
+    </div>
+    {% else %}
+
+
+    <div class="user-profile rounded-2 border border-secondary">
+        <h3 data-username="{{ username }}">{{ username }}<span class="user-span" data-username="{{ username }}"></span></h3>
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Followers: <span class="badge bg-success">{{ followers }}</span></th>
+                <th scope="col">Following: <span class="badge bg-success">{{ following }}</span></th>
+                <th scope="col">Reputation: <span class="badge bg-primary">{{ req_user.score }}</span></th>
+                <th scope="col"><button id="follow-btn" type="button" class="btn btn-primary btn-sm">Follow</button></th>
+              </tr>
+            </thead>
+          </table>
+          {% if user != req_user %}
+          <p>You are visiting the profile of <b>{{ username }}</b>.</p>
+          {% else %}
+          <p>This is your profile.</p>
+          {% endif %}
+          <p>Last seen: {{ req_user.last_login }}</p>
+        </div>
+      <div id="all-posts" class="profile-posts"></div>
+    {% endif %}
+
+        
+{% endblock body %}
+    

@@ -1,0 +1,16 @@
+{% extends 'nifty/layout.html' %}
+{% block body %}
+
+    {% if message %}
+        <div class="notification" style="display: none;">{{ message }}</div>
+    {% endif %}
+
+    <h4>Welcome, {{ user.username }}</h4>
+    {% if user.is_superuser %}
+    <button id="admin-view-button" class="btn btn-primary">Admin Tools</button>
+    {% endif %}
+    <button id="course-view-button" class="btn btn-primary">My Courses</button>
+    <hr>
+    <div id="contents"></div>
+
+{% endblock %}

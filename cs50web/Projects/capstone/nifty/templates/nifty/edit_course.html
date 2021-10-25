@@ -1,0 +1,17 @@
+{% extends 'nifty/layout.html' %}
+
+{% block body %}
+    <p id="course_id" style="display: None;">{{ course.id }}</p>
+    <p style="margin-bottom: 0;" class="fs-5 fw-light">You are editing</p>
+    <p class="fs-2 fw-light">{{ course.name }}</p>
+    <div>
+        <button id="edit-course" type="button" class="btn btn-outline-secondary m-b-2vh">Edit Course</button>
+        <button id="edit-topic" type="button" class="btn btn-outline-secondary m-b-2vh">Edit Topic</button>
+        <button id="new-topic" type="button" class="btn btn-outline-secondary m-b-2vh">New Topic</button>
+        <a href="{% url 'course' course.id %}" type="button" class="btn btn-outline-primary m-b-2vh">View Course</a>
+    </div>
+    <div id="content">
+        
+    </div>
+    
+{% endblock body %}
